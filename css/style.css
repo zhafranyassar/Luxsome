@@ -214,31 +214,31 @@ body {
   line-height: 1.6;
 }
 
-.container {
+.menu .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
 }
 
-.container .products-container {
+.menu .container .products-container {
   display: flex;
   margin-top: 5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.container .products-container .product {
+.menu .container .products-container .product {
   text-align: center;
   padding-bottom: 4rem;
   cursor: pointer;
 }
 
-.container .products-container .product img {
+.menu.container .products-container .product img {
   border-radius: 50%;
   width: 80%;
 }
 
-.container .products-container .product:hover img {
+.menu .container .products-container .product:hover img {
   transform: scale(0.95);
   align-items: center;
   outline: 0.1px solid;
@@ -246,15 +246,15 @@ body {
   outline-color: var(--primary);
 }
 
-.container .products-container .product h3 {
+.menu .container .products-container .product h3 {
   margin: 1rem auto 0.4rem;
 }
 
-.container .products-container .product:hover h3 {
+.menu .container .products-container .product:hover h3 {
   color: var(--primary);
 }
 
-.container .products-container .product .price {
+.menu .container .products-container .product .price {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -287,16 +287,16 @@ body {
   height: 44.5rem;
 }
 
-.products-preview .preview.active {
+.menu .products-preview .preview.active {
   display: inline-block;
 }
 
-.products-preview .preview img {
+.menu .products-preview .preview img {
   padding: 1rem;
   width: 86%;
 }
 
-.products-preview .preview .fa-times {
+.menu .products-preview .preview .fa-times {
   position: absolute;
   top: 0.5rem;
   right: 0.7rem;
@@ -304,54 +304,24 @@ body {
   font-size: 4rem;
 }
 
-.products-preview .preview .fa-times:hover {
+.menu .products-preview .preview .fa-times:hover {
   transform: rotate(90deg);
 }
 
-.products-preview .preview h3 {
+.menu .products-preview .preview h3 {
   padding: 0.5rem;
   font-size: 2rem;
 }
 
-.products-preview .preview p {
+.menu .products-preview .preview p {
   line-height: 1.5;
   padding: 0.5rem 0;
   font-size: 1.4rem;
 }
 
-.products-preview .preview .price {
+.menu .products-preview .preview .price {
   padding: 0.5rem 0;
   font-size: 1.7rem;
-  color: #fff;
-}
-
-/* css jika ingin menambahkan button buy dan add to cart (tapi masih terlalu besar masih harus adjust) */
-.products-preview .preview .buttons {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 0;
-}
-
-.products-preview .preview .buttons a {
-  flex: 1 1 16rem;
-  padding: 1rem;
-  font-size: 1.8rem;
-  color: #444;
-  border: 0.1rem solid #444;
-}
-
-.products-preview .preview .buttons a.cart {
-  background: #444;
-  color: #fff;
-}
-
-.products-preview .preview .buttons a.cart:hover {
-  background: #111;
-}
-
-.products-preview .preview .buttons a.buy:hover {
-  background: #444;
   color: #fff;
 }
 
@@ -517,18 +487,7 @@ footer .credit a {
     font-size: 1.2rem;
   }
 
-  .contact .row {
-    flex-wrap: wrap;
-  }
-
-  .contact .row .map {
-    height: 30rem;
-  }
-
-  .contact .row form {
-    padding-top: 0;
-  }
-  .products-preview .preview {
+  .menu .products-preview .preview {
     display: none;
     padding: 2rem;
     text-align: center;
@@ -540,15 +499,15 @@ footer .credit a {
     height: 50rem;
   }
 
-  .products-preview .preview.active {
+  .menu .products-preview .preview.active {
     display: inline-block;
   }
 
-  .products-preview .preview img {
+  .menu .products-preview .preview img {
     height: 30rem;
   }
 
-  .products-preview .preview .fa-times {
+  .menu .products-preview .preview .fa-times {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -557,13 +516,25 @@ footer .credit a {
     font-size: 4rem;
   }
 
-  .products-preview .preview .fa-times:hover {
+  .menu .products-preview .preview .fa-times:hover {
     transform: rotate(90deg);
   }
 
-  .products-preview .preview h3 {
+  .menu .products-preview .preview h3 {
     padding: 0.5rem 0;
     font-size: 2.5rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
   }
 }
 
