@@ -1,5 +1,5 @@
 :root {
-  --primary: #ccb79c;
+  --primary: #9e7b46;
 
   --bg: #010101;
 }
@@ -214,25 +214,145 @@ body {
   line-height: 1.6;
 }
 
-.menu .row {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.container .products-container {
   display: flex;
   margin-top: 5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.menu .row .menu-card {
+.container .products-container .product {
   text-align: center;
   padding-bottom: 4rem;
+  cursor: pointer;
 }
 
-.menu .row .menu-card img {
+.container .products-container .product img {
   border-radius: 50%;
   width: 80%;
 }
 
-.menu .row .menu-card .menu-card-title {
-  margin: 1rem auto 0.5rem;
+.container .products-container .product:hover img {
+  transform: scale(0.95);
+  align-items: center;
+  outline: 0.1px solid;
+  outline-offset: 1.5rem;
+  outline-color: var(--primary);
+}
+
+.container .products-container .product h3 {
+  margin: 1rem auto 0.4rem;
+}
+
+.container .products-container .product:hover h3 {
+  color: var(--primary);
+}
+
+.container .products-container .product .price {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* Pop Up preview Menu */
+.products-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-preview .preview {
+  display: none;
+  padding: 1.2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  border: solid #4e3b28;
+  position: relative;
+  margin: 6.5rem;
+  width: 35rem;
+  height: 44.5rem;
+}
+
+.products-preview .preview.active {
+  display: inline-block;
+}
+
+.products-preview .preview img {
+  padding: 1rem;
+  width: 86%;
+}
+
+.products-preview .preview .fa-times {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  cursor: pointer;
+  font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover {
+  transform: rotate(90deg);
+}
+
+.products-preview .preview h3 {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+.products-preview .preview p {
+  line-height: 1.5;
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.products-preview .preview .price {
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+/* css jika ingin menambahkan button buy dan add to cart (tapi masih terlalu besar masih harus adjust) */
+.products-preview .preview .buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.products-preview .preview .buttons a {
+  flex: 1 1 16rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #444;
+  border: 0.1rem solid #444;
+}
+
+.products-preview .preview .buttons a.cart {
+  background: #444;
+  color: #fff;
+}
+
+.products-preview .preview .buttons a.cart:hover {
+  background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover {
+  background: #444;
+  color: #fff;
 }
 
 /* Contact Section */
@@ -407,6 +527,43 @@ footer .credit a {
 
   .contact .row form {
     padding-top: 0;
+  }
+  .products-preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+    border: solid #4e3b28;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+    height: 50rem;
+  }
+
+  .products-preview .preview.active {
+    display: inline-block;
+  }
+
+  .products-preview .preview img {
+    height: 30rem;
+  }
+
+  .products-preview .preview .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 4rem;
+  }
+
+  .products-preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+  }
+
+  .products-preview .preview h3 {
+    padding: 0.5rem 0;
+    font-size: 2.5rem;
   }
 }
 
