@@ -500,7 +500,7 @@ footer .credit a {
   }
 
   .container .products-container .product:hover img {
-    transform: scale(0);
+    transform: none;
   }
 
   .products-preview .preview {
@@ -558,5 +558,19 @@ footer .credit a {
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+  .container .products-container .product {
+    text-align: center;
+    padding-bottom: 4rem;
+    cursor: none;
+  }
+
+  .container .products-container .product img {
+    border-radius: 50%;
+    width: 80%;
+  }
+
+  .container .products-container .product:hover img {
+    transform: none;
   }
 }
