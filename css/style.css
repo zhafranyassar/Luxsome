@@ -500,7 +500,10 @@ footer .credit a {
   }
 
   .container .products-container .product:hover img {
-    transform: none;
+    transform: scale(0.95);
+    align-items: center;
+    outline: none;
+    outline-offset: 1.5rem;
   }
 
   .products-preview .preview {
